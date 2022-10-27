@@ -22,7 +22,7 @@ public class LetterCount {
         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
         DataSet<String> text = env.readTextFile(input);
-        DataSet<Tuple2<String, Integer>> counts = text.flatMap(new BatchJob_debug.Tokenizer()).groupBy(0).sum(1);
+        DataSet<Tuple2<String, Integer>> counts = text.flatMap(new Tokenizer()).groupBy(0).sum(1);
         counts.writeAsText(output, FileSystem.WriteMode.OVERWRITE);
         env.execute("Flink Batch Java API Skeleton");
     }

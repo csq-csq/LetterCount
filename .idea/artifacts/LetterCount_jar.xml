@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LetterCount:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LetterCount_jar</output-path>
+    <root id="archive" name="LetterCount.jar">
+      <element id="module-output" name="LetterCount" />
+    </root>
+  </artifact>
+</component>
