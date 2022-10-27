@@ -35,6 +35,7 @@ public class LetterCount {
             for (String token : tokens) {
                 if (token.length() > 0) {
                     String[] letters = token.split("");
+                    //加一层循环，把单词打成字母
                     for (String letter : letters) {
                         if(letter.length()>0) {
                             System.out.println(letter);
