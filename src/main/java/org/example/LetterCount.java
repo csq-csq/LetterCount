@@ -10,6 +10,7 @@ public class LetterCount {
     public static void main(String[] args) throws Exception {
         String input = null;
         String output = null;
+        //本地调试时将上面两行改成本地地址，然后把下面的try-catch注释掉
         ParameterTool params = ParameterTool.fromArgs(args);
         try {
             input = params.getRequired("input");
@@ -35,8 +36,10 @@ public class LetterCount {
                 if (token.length() > 0) {
                     String[] letters = token.split("");
                     for (String letter : letters) {
-                        System.out.println(letter);
-                        out.collect(new Tuple2<String, Integer>(letter, 1));
+                        if(letter.length()>0) {
+                            System.out.println(letter);
+                            out.collect(new Tuple2<String, Integer>(letter, 1));
+                        }
                     }
                 }
             }
